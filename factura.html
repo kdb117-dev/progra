@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Este formulario calcula factura</title>
+    <link href="estiloFACTURA.CSS" rel="stylesheet" type="text/css">
+</head>
+<body>
+   
+    <form>
+        <div>
+            <h1>Factura de Productos</h1>
+            <label for="Codigo">Código:</label>
+            <input type="text" placeholder="Escriba su código" required>
+            <br><br>
+
+            <label for="Nombre de Usuario">Nombre:</label>   
+            <input type="text" placeholder="Escriba su nombre" required name="nombre">
+            <br><br>
+
+            <label for="Seleccione fecha">Fecha:</label>
+            <input type="date" required>
+            <br><br>
+            <label for="Seleccione Genero">Género:</label>
+            <select name="Genero">
+                <option> Masculino</option>
+                <option> Femenino</option>
+            </select>
+            <br><br>
+
+            <label for="Seleccione Productos">Productos:</label>
+            <select name="Productos">
+                <option> Azúcar </option>
+                <option> Arroz </option>
+                <option> Maíz </option>
+                <option> Trigo </option>
+                <option> Frijoles </option>
+                <option> Harina </option>
+            </select>
+            <br><br>
+            
+
+            <label for="Precio del Producto">Precio:</label>
+            <input type="number" title="Ingrese el precio" id="precio1" placeholder="Precio" required>
+            <br><br>
+
+            <label for="Cantidad de Productos">Cantidad:</label>
+            <input type="number" title="Ingrese la cantidad" id="cantidad1" placeholder="Cantidad" required>
+            <br><br>
+
+
+            <label for="Subtotal">Subtotal:</label>
+            <input type="text" id="subtotal" placeholder="Subtotal">
+            <br><br>
+
+            <label for="Impuesto">Impuesto (15%):</label>
+            <input type="text" id="impuesto" placeholder="Impuesto">
+            <br><br>
+
+            <label for="Total">Total:</label>
+            <input type="text" id="total" placeholder="Total">
+            <br><br>
+
+            <label for="Seleccione Metodo de Pago">Método de Pago:</label>
+            <br>
+            <input type="radio" name="TipoPago" value="Credito"> tarjeta
+            <br>
+            <input type="radio" name="TipoPago" value="Efectivo"> Efectivo
+            <br>
+            <button type="button" onclick="calcula_Factura()">calcular</button>
+            <button type="reset">Nuevo Cálculo</button>
+            <button type="reset">Salir</button>
+        </div>
+        
+    
+    
+    <script src="factura.js"></script>
+    <br><br>
+</form><a href="index.html" title="Retorna a la página principal" target="_blank">Hoja Principal</a>
+    
+</body>
+</html>

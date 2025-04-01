@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíz Cuadrada de un Número</title>
+    <link href="estiloRaizcuadrada.css" rel="stylesheet" type="text/css">
+</head>
+    <script>
+        function calcularRaiz() {
+            let valor = document.getElementById("valor").value;
+            let resultado = Math.sqrt(valor);
+            if (isNaN(resultado)) {
+                document.getElementById("resultado").value = "Entrada no válida";
+            } else {
+                document.getElementById("resultado").value = resultado;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <h1>Calcula la Raíz Cuadrada</h1>
+
+    <form onsubmit="event.preventDefault(); calcularRaiz();">
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" placeholder="Ingrese un número" required>
+
+        <br><br>
+
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" placeholder="Resultado" readonly>
+
+        <br><br>
+
+        <input type="submit" value="Calcular">
+    </form><a href="index.html" title="Retorna a la página principal" target="_blank">Hoja Principal</a>
+    
+</body>
+</html>
